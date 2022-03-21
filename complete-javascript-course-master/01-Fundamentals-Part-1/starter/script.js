@@ -29,4 +29,33 @@ console.log(averagePopulation > population);
 // LECTURE: Strings and Template Literals
 let description = `${country} is in ${continent}, and its ${population} million people speak ${language}.`;
 console.log(description);
+
+//LECTURE: Taking Decisions: if / else Statements
+if(population > averagePopulation) {
+    console.log(`${country} population is above average.`);
+}
+else if (population < averagePopulation){
+    console.log(`${country} population is ${averagePopulation - population} million below average.`)
+} else {
+    console.log(`${country} population is average.`)
+}
+
 */
+
+// Coding Challenge #1 and #2
+
+let markMass = prompt("Enter Mark Mass/weight in KG");
+let markHeight = prompt("Enter Mark Height (example: 1.69)");
+let markBMI = markMass / (markHeight * markHeight);
+
+let johnMass = prompt("Enter John Mass/weight in KG");
+let johnHeight = prompt("Enter John Height (example: 1.69)");
+let johnBMI = johnMass / (johnHeight * johnHeight);
+
+if (markBMI > johnBMI){
+    console.log(`Mark's BMI is ${markBMI} and greater than John ${johnBMI}`);
+} else if (johnBMI > markBMI){
+    console.log(`John's BMI is ${johnBMI} and greater than Mark ${markBMI}`);
+} else {
+    console.log(`Their BMI is equal`);
+}
