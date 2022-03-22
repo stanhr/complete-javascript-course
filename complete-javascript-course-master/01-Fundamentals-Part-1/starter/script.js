@@ -40,8 +40,9 @@ else if (population < averagePopulation){
     console.log(`${country} population is average.`)
 }
 
-*/
 
+
+/
 // Coding Challenge #1 and #2
 
 let markMass = prompt("Enter Mark Mass/weight in KG");
@@ -59,3 +60,43 @@ if (markBMI > johnBMI){
 } else {
     console.log(`Their BMI is equal`);
 }
+
+
+
+// LECTURE: Type Conversion and Coercion
+console.log('9' - '5'); // 4
+console.log('19' - '13' + '17'); // 617
+console.log('19' - '13' + 17); // 23
+console.log('123' < 57); // false (type coersion of course)
+console.log(5 + 6 + '4' + 9 - 4 - 2); // 1143 :)
+
+
+
+// LECTURE: Equality Operators: == vs. ===
+let numNeighbours = Number(prompt("How many neighbour countries does your country have?"));
+
+if (numNeighbours === 1) console.log("Only 1 border!");
+else if (numNeighbours > 1) console.log ("More than 1 border");
+else if (numNeighbours === 0) console.log ("No borders");
+
+
+
+// LECTURE: Logical Operators
+let sarahChooseCountry = prompt("Which name of the country you wanna live?");
+let sarahCheckLanguage = prompt("Language of country?");
+let sarahCheckPopulation = prompt("Population of country?");
+let sarahCheckIsland = Boolean(prompt("Is it island? Answer: true or false?"))
+let sarahCriteriaLanguage = "English";
+let sarahCriteriaPopulation = 50;
+let sarahCriteriaIsland = false;
+
+if (sarahCheckLanguage === sarahCriteriaLanguage && sarahCheckPopulation < sarahCriteriaPopulation && sarahCheckIsland != sarahCriteriaIsland) {
+    console.log(`You should live at ${sarahChooseCountry}!`);
+} else {
+    console.log(`${sarahChooseCountry} does not meet your criteria :(`)
+}
+/// нужно разобраться как в сравнениях не учитывать регистр
+
+*/
+
+// Coding Challenge #3
