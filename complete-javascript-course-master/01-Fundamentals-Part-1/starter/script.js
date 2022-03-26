@@ -120,6 +120,6 @@ if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
     alert(`🥇Koalas is winner! ${koalasAverage} vs. ${dolphinsAverage}`);
 } else if (dolphinsAverage === koalasAverage && koalasAverage >= 100 && dolphinsAverage >= 100) {
     alert("There is a draw! 🤝");
-} else if (dolphinsAverage < 100 && dolphinsAverage < 100) {
+} else {
     alert("There is no winner! 🤝");
 }
