@@ -124,7 +124,7 @@ if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
     alert("There is no winner! 🤝");
 }
 
-*/
+
 
 // LECTURE: The switch Statement
 
@@ -150,3 +150,11 @@ switch (language) {
     default:
         alert("Great language too :D");
 }
+
+*/
+
+// LECTURE: The Conditional (Ternary) Operator
+
+let countryPopulation = prompt("Enter your country population");
+
+alert(`${countryPopulation > 33 ? "Country population is above average" : "Country population is below average"}`);
