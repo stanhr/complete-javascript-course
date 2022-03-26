@@ -97,7 +97,7 @@ if (sarahCheckLanguage === sarahCriteriaLanguage && sarahCheckPopulation < sarah
 }
 /// нужно разобраться как в сравнениях не учитывать регистр
 
-*/
+
 
 // Coding Challenge #3
 // доработал, используя промт, в который я разобрался как получить значения в числе с точкой — функция parseFloat() — число с плавающей точкой; parseInt() — целое число; 
@@ -122,4 +122,31 @@ if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
     alert("There is a draw! 🤝");
 } else {
     alert("There is no winner! 🤝");
+}
+
+*/
+
+// LECTURE: The switch Statement
+
+let language = prompt("Please enter the language");
+
+switch (language) {
+    case "chinese":
+    case "mandarin":
+        alert("MOST number of native speakers!");
+        break;
+    case "spanish":
+        alert("2nd place in number of native speakers");
+        break;
+    case "english":
+        alert("3rd place");
+        break;
+    case "hindi":
+        alert("Number 4");
+        break;
+    case "arabic":
+        alert("5th most spoken language");
+        break;
+    default:
+        alert("Great language too :D");
 }
