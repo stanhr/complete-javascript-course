@@ -100,3 +100,26 @@ if (sarahCheckLanguage === sarahCriteriaLanguage && sarahCheckPopulation < sarah
 */
 
 // Coding Challenge #3
+// доработал, используя промт, в который я разобрался как получить значения в числе с точкой — функция parseFloat() — число с плавающей точкой; parseInt() — целое число; 
+// Внимание! Если использовать целые числа = найдены баги, потому что часто cредний результат это не целое число. И чтобы в таком случае программа работала корректно — нужно еще разбираться с тем как округлять эти float в целые числа. Но это потом.  
+
+let dolphinsResult1 = parseFloat(prompt("Enter Dolphins Result 1"));
+let dolphinsResult2 = parseFloat(prompt("Enter Dolphins Result 2"));
+let dolphinsResult3 = parseFloat(prompt("Enter Dolphins Result 3"));
+
+let koalasResult1 = parseFloat(prompt("Enter Koalas Result 1"));
+let koalasResult2 = parseFloat(prompt("Enter Koalas Result 2"));
+let koalasResult3 = parseFloat(prompt("Enter Koalas Result 3"));
+
+let dolphinsAverage = (dolphinsResult1 + dolphinsResult2 + dolphinsResult3) / 3;
+let koalasAverage = (koalasResult1 + koalasResult2 + koalasResult3) / 3;
+
+if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
+    alert(`🥇Dolphins is winner! ${dolphinsAverage} vs. ${koalasAverage}`);
+} else if (dolphinsAverage < koalasAverage && koalasAverage >= 100) {
+    alert(`🥇Koalas is winner! ${koalasAverage} vs. ${dolphinsAverage}`);
+} else if (dolphinsAverage === koalasAverage && koalasAverage >= 100 && dolphinsAverage >= 100) {
+    alert("There is a draw! 🤝");
+} else if (dolphinsAverage < 100 && dolphinsAverage < 100) {
+    alert("There is no winner! 🤝");
+}
