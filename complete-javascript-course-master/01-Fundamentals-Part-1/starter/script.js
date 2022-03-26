@@ -151,10 +151,19 @@ switch (language) {
         alert("Great language too :D");
 }
 
-*/
+
 
 // LECTURE: The Conditional (Ternary) Operator
 
 let countryPopulation = prompt("Enter your country population");
 
 alert(`${countryPopulation > 33 ? "Country population is above average" : "Country population is below average"}`);
+
+*/
+
+// Coding Challenge #4
+
+let bill = parseFloat(prompt("Enter the bill value and we will count the tip"));
+let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+alert(`The bill was ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
