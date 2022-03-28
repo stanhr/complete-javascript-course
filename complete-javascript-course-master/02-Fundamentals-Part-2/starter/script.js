@@ -17,7 +17,7 @@ console.log(poland);
 let albania = describeCountry("Albania", 3, "Tirana");
 console.log(albania);
 
-*/
+
 
 // LECTURE: Function Declarations vs. Expressions
 
@@ -42,3 +42,12 @@ let population5 = percentageOfWorld2(44);
 let population6 = percentageOfWorld2(5);
 
 console.log(population4, population5, population6);
+
+*/
+
+// LECTURE: Arrow Functions
+
+let percentageOfWorld3 = population => `${population / 7900 * 100}%`;
+console.log(percentageOfWorld3(100));
+console.log(percentageOfWorld3(44));
+console.log(percentageOfWorld3(5));
