@@ -36,6 +36,8 @@ Truthy and Falsy Values нужно понимать когда они испол
 
 — Принцип DRY (Don't repeat yourself) позволяют реализовать функции в т.ч.
 
+— После return внутри функции, выполнение прекращается, поэтому все что ниже уже не работает. Так как функция вернула значение и вышла. 
+
 ## Function Declarations vs. Function Expressions
 
 — В Function Declarations функцию можно вызвать еще до обьявления ее, в отличии от Function Expressions
