@@ -91,7 +91,6 @@ checkWinner();
 
 // но в своем решении он всетаки придерживается того, чтобы в функции были аргументы. я же решил тут сократить их и напрямую брать внутри второй функции значения из внешних/глобальных переменных.
 
-*/
 
 // LECTURE: Introduction to Arrays
 
@@ -104,3 +103,18 @@ function percentageOfWorld1(population) {
 
 const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3]),];
 console.log(percentages);
+
+*/
+
+// LECTURE: Basic Array Operations (Methods)
+
+let neighbours = ["Ukraine", "Germany", "Slovakia"] // some of polands neighbours
+
+neighbours.push("Utopia"); // добавил утопию в конец массива
+neighbours.pop(); // удалил последний элемент Утопию
+
+if (neighbours.includes("Germany")) console.log("Probably this is European Country");
+
+neighbours[neighbours.indexOf("Slovakia")] = "Czechia";
+
+console.log(neighbours);
