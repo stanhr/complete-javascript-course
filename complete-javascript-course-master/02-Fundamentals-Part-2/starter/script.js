@@ -104,7 +104,7 @@ function percentageOfWorld1(population) {
 const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3]),];
 console.log(percentages);
 
-*/
+
 
 // LECTURE: Basic Array Operations (Methods)
 
@@ -118,3 +118,18 @@ if (neighbours.includes("Germany")) console.log("Probably this is European Count
 neighbours[neighbours.indexOf("Slovakia")] = "Czechia";
 
 console.log(neighbours);
+
+*/
+
+// JavaScript Fundamentals – Part 2 — Coding Challenge #2
+
+function calcTip(bill) {
+    let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+    return tip;
+}
+
+let bills = [125, 555, 44];
+let tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+let totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2],]
+
+console.log(`Bills are ${bills} and tips are ${tips}. Total payments are ${totals}`);
