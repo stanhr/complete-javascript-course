@@ -67,7 +67,7 @@ console.log(describePopulation("Ukraine", 44));
 console.log(describePopulation("Poland", 38));
 console.log(describePopulation("Albania", 3));
 
-*/
+
 
 // JavaScript Fundamentals – Part 2 — Coding Challenge #1
 
@@ -90,3 +90,17 @@ function checkWinner() {
 checkWinner();
 
 // но в своем решении он всетаки придерживается того, чтобы в функции были аргументы. я же решил тут сократить их и напрямую брать внутри второй функции значения из внешних/глобальных переменных.
+
+*/
+
+// LECTURE: Introduction to Arrays
+
+const populations = [10, 20, 30, 40];
+if (populations.length === 4) console.log("The aray has 4 values");
+
+function percentageOfWorld1(population) {
+    return `${population / 7900 * 100}%`;
+}
+
+const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3]),];
+console.log(percentages);
