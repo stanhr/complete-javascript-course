@@ -133,7 +133,6 @@ let totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2],]
 
 console.log(`Bills are ${bills} and tips are ${tips}. Total payments are ${totals}`);
 
-*/
 
 // LECTURE: Introduction to Objects
 
@@ -146,3 +145,7 @@ const myCountry = {
 }
 
 console.log(myCountry);
+
+*/
+
+// LECTURE: Dot vs. Bracket Notation
