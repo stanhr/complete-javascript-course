@@ -146,6 +146,34 @@ const myCountry = {
 
 console.log(myCountry);
 
-*/
+
 
 // LECTURE: Dot vs. Bracket Notation
+
+let objectName = {
+    property1: "value1",
+    property2: "value2"
+}
+console.log(objectName.property1);
+console.log(objectName["property1"]);
+
+// чтобы добавить значения:
+objectName.property3 = "value3";
+objectName["property4"] = "value4";
+console.log(objectName);
+
+*/
+
+// challenge внутри лекции
+
+let jonas = {
+    firstName: "Jonas",
+    lastName: "Schmedtman",
+    friends: ["Michael", "Peter", "Steven"]
+}
+
+console.log(`${jonas["firstName"]} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`);
+
+
+
+// LECTURE: Dot vs. Bracket Notation Assignment:
