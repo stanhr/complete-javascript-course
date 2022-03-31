@@ -162,7 +162,7 @@ objectName.property3 = "value3";
 objectName["property4"] = "value4";
 console.log(objectName);
 
-*/
+
 
 // challenge внутри лекции
 
@@ -174,6 +174,16 @@ let jonas = {
 
 console.log(`${jonas["firstName"]} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`);
 
-
+*/
 
 // LECTURE: Dot vs. Bracket Notation Assignment:
+
+const myCountry = {
+    name: "Ukraine",
+    capital: "Kyiv",
+    language: "Ukrainian",
+    population: 44,
+    neighbours: ["Poland", "Romania", "Slovakia"]
+}
+
+console.log(`${myCountry.name} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry["capital"]}.`);
