@@ -119,7 +119,6 @@ neighbours[neighbours.indexOf("Slovakia")] = "Czechia";
 
 console.log(neighbours);
 
-*/
 
 // JavaScript Fundamentals – Part 2 — Coding Challenge #2
 
@@ -133,3 +132,17 @@ let tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 let totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2],]
 
 console.log(`Bills are ${bills} and tips are ${tips}. Total payments are ${totals}`);
+
+*/
+
+// LECTURE: Introduction to Objects
+
+const myCountry = {
+    country: "Ukraine",
+    capital: "Kyiv",
+    language: "Ukrainian",
+    population: 44,
+    neighbours: ["Poland", "Romania", "Slovakia"]
+}
+
+console.log(myCountry);
