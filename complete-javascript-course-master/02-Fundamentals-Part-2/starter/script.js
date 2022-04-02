@@ -214,7 +214,6 @@ const jonas = {
 
 console.log(jonas.summary());
 
-*/
 
 // Coding Challenge #3 — Fundamentals Part 2
 
@@ -244,3 +243,11 @@ mark.calcBMI();
 john.calcBMI();
 
 console.log(`John's BMI (${john.bmi}) is ${john.bmi > mark.bmi ? "higher" : "lower"} than Mark's (${mark.bmi})`);
+
+*/
+
+// LECTURE: Iteration: The for Loop
+
+for (let voter = 1; voter <= 50; voter++) {
+    console.log(`Voter number ${voter} is currently voting`);
+}
