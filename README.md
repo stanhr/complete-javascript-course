@@ -70,3 +70,7 @@ console.log(objectName["property1"]);
 objectName.property3 = "value3";
 objectName["property4"] = "value4";
 console.log(objectName);
+
+— Любая функция, которая прикреплена к обьекту (внутри прописана), называется методом. 
+
+— .this значит что этот обьект, из которого вызывается метод. .this в консоль вернет полностью весь обьект. 

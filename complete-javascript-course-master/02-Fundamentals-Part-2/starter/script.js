@@ -174,7 +174,7 @@ let jonas = {
 
 console.log(`${jonas["firstName"]} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`);
 
-*/
+
 
 // LECTURE: Dot vs. Bracket Notation Assignment:
 
@@ -187,3 +187,29 @@ const myCountry = {
 }
 
 console.log(`${myCountry.name} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry["capital"]}.`);
+
+*/
+
+// Object Methods Lection Challenge
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    summary: function () {
+        const summaryString = `${this.firstName} is ${this.calcAge()} old , and he ${this.hasDriversLicense ? "has" : "not has"} a driver's license`;
+        return summaryString;
+    }
+    // The Conditional (Ternary) Operator ? if true : if false
+};
+
+console.log(jonas.summary());
