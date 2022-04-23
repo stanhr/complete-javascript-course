@@ -119,3 +119,24 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+
+header {
+  display: flex;
+}
+
+main {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  body {
+    transform: scale(0.7);
+  }
+  header {
+    flex-direction: column;
+  }
+  main {
+    flex-direction: column;
+  }
+}
