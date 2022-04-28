@@ -35,5 +35,32 @@ const rollDiceFunction = function() {
     document.querySelector(".dice").setAttribute("src", `dice-${dice}.png`);
 };
 
-// Вызов функции бросить кость, по нажатию кнопки
-rollBtn.addEventListener("click", rollDiceFunction);
+
+rollBtn.addEventListener("click", function() {
+
+    let currentPlayer = 1;
+    rollDiceFunction();    
+
+    if (player1Score >= 100) {
+        document.querySelector(".player--0").classList.toggle("player--active");
+        document.querySelector(".player--0").classList.toggle("player--winner");
+    } else if (dice !== 1) {
+        player1CurrentScore = player1CurrentScore + dice; 
+        player1CurrentScoreLabel.textContent = player1CurrentScore;
+    } else if (dice === 1) {
+        player1CurrentScore = 0;
+        player1CurrentScoreLabel.textContent = player1CurrentScore;
+        document.querySelector(".player--0").classList.toggle("player--active");
+        document.querySelector(".player--1").classList.toggle("player--active");
+        //cмена хода — добавить
+    }
+
+    holdBtn.addEventListener('click', function(){
+        player1Score = player1Score + player1CurrentScore;
+        player1ScoreLabel.textContent = player1Score;
+        player1CurrentScore = 0;
+        player1CurrentScoreLabel.textContent = player1CurrentScore;
+    })
+});
+
+
