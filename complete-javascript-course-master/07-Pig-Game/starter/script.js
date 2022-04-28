@@ -1,10 +1,10 @@
 'use strict';
 
 let dice;
-let player1Score = 0; // player 1 total score
-let player2Score = 0; // player 2 total score
-let player1CurrentScore = 0; // player 1 current score
-let player2CurrentScore = 0; // player 2 current score
+let player1Score; // player 1 total score
+let player2Score; // player 2 total score
+let player1CurrentScore; // player 1 current score
+let player2CurrentScore; // player 2 current score
 
 const newGameBtn = document.querySelector(".btn--new");
 const holdBtn = document.querySelector(".btn--hold");
