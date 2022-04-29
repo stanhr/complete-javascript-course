@@ -5,6 +5,7 @@ let player1Score; // player 1 total score
 let player2Score; // player 2 total score
 let player1CurrentScore; // player 1 current score
 let player2CurrentScore; // player 2 current score
+let activePlayer = 1;
 
 const newGameBtn = document.querySelector(".btn--new");
 const holdBtn = document.querySelector(".btn--hold");
@@ -35,16 +36,31 @@ const rollDiceFunction = function() {
     document.querySelector(".dice").setAttribute("src", `dice-${dice}.png`);
 };
 
+// Функция переключения пользователя
+const switchActivePlayer = function () {
+    activePlayer = activePlayer === 1 ? 2 : 1;
+}
 
+/// main game logic flow
 rollBtn.addEventListener("click", function() {
 
-    let currentPlayer = 1;
     rollDiceFunction();    
 
-    if (player1Score >= 100) {
-        document.querySelector(".player--0").classList.toggle("player--active");
-        document.querySelector(".player--0").classList.toggle("player--winner");
-    } else if (dice !== 1) {
+    holdBtn.addEventListener('click', function(){
+        player[activePlayer]Score = player1Score + player1CurrentScore;
+        player1ScoreLabel.textContent = player1Score;
+        player1CurrentScore = 0;
+        player1CurrentScoreLabel.textContent = player1CurrentScore;
+        switchActivePlayer();
+
+        if (player1Score >= 100) {
+            document.querySelector(".player--0").classList.toggle("player--active");
+            document.querySelector(".player--0").classList.toggle("player--winner");
+        }
+    });
+
+   
+    if (dice !== 1) {
         player1CurrentScore = player1CurrentScore + dice; 
         player1CurrentScoreLabel.textContent = player1CurrentScore;
     } else if (dice === 1) {
@@ -52,15 +68,6 @@ rollBtn.addEventListener("click", function() {
         player1CurrentScoreLabel.textContent = player1CurrentScore;
         document.querySelector(".player--0").classList.toggle("player--active");
         document.querySelector(".player--1").classList.toggle("player--active");
-        //cмена хода — добавить
+        switchActivePlayer();
     }
-
-    holdBtn.addEventListener('click', function(){
-        player1Score = player1Score + player1CurrentScore;
-        player1ScoreLabel.textContent = player1Score;
-        player1CurrentScore = 0;
-        player1CurrentScoreLabel.textContent = player1CurrentScore;
-    })
 });
-
-
